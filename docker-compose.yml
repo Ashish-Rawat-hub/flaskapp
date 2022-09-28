@@ -1,0 +1,24 @@
+version: '3.1'
+services:
+  API:
+    image: 'flaskapp'
+    ports:
+      - "5002:5000"
+    depends_on:
+      - mydb  
+
+  mydb:
+    image: postgres
+    pull_policy: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=userpass
+      - POSTGRES_USER=users
+      - POSTGRES_DB=pgdb3
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 4343:8080
