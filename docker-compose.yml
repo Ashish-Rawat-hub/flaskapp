@@ -9,7 +9,8 @@ services:
 
   mydb:
     image: postgres
-    pull_policy: always
+    volumes:
+      - db-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:
@@ -22,3 +23,11 @@ services:
     restart: always
     ports:
       - 4343:8080
+
+volumes:
+  db-data:
+
+networks:
+    default:
+        external:
+            name: mybridge
