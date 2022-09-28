@@ -57,7 +57,7 @@ def add():
     db.session.add(entry)
     db.session.commit()
 
-    return 'done'
+    return 'Successfully added in database'
     #return render_template('index.html')
 if __name__ == '__main__':
     app.run(debug=True)
