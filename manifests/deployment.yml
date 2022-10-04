@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: flaskpipeline 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskpipeline
+  template:
+    metadata:
+      labels:
+        app: flaskpipeline 
+    spec:
+      containers:
+        - name: flaskpipeline 
+          image: aksacr18.azurecr.io/flaskpipeline
+          ports:
+          - containerPort: 5000
