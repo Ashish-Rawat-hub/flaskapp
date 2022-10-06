@@ -30,7 +30,7 @@ stages:
     - task: OctopusPush@5
       inputs:
         OctoConnectedServiceName: 'Octopus'
-        Space: 'Spaces-1'
+        Space: 'Spaces-2'
         Package: '$(Build.SourcesDirectory)/Dockerfile'
         Replace: 'true'
           
