@@ -27,10 +27,4 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
-    - task: OctopusPush@5
-      inputs:
-        OctoConnectedServiceName: 'Octopus'
-        Space: 'Spaces-2'
-        Package: '$(Build.SourcesDirectory)/Dockerfile'
-        Replace: 'true'
           
