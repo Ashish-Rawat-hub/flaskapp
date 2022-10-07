@@ -35,5 +35,5 @@ stages:
       inputs:
         OctoConnectedServiceName: 'Octopus'
         Space: 'Spaces-2'
-        Package: '$(Build.SourcesDirectory)/Dockerfile'
+        Package: 'flaskpipeline:$(tag)'
         Replace: 'true'
