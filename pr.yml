@@ -1,6 +1,7 @@
 pr:
 - main
 - dev-*
+- azure-pipelinesnew
 
 pool:
   vmImage: windows-latest
