@@ -5,6 +5,7 @@
 trigger:
 - main
 
+pr: none
 resources:
 - repo: self
 
