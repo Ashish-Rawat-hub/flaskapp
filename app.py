@@ -10,6 +10,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 
+
 class Names(db.Model):
     __tablename__ = 'names'
     id = db.Column(db.Integer, primary_key=True)
