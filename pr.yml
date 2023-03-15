@@ -4,6 +4,7 @@ pr:
 - azure-pipelinesnew
 trigger: none
 
+
 pool:
   vmImage: windows-latest
 
